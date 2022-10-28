@@ -9,10 +9,11 @@ cls
 color 3f
 Echo Welcome!
 cls
-Echo --------------------Apps---------------------
+Echo --------------------Apps-----------------------
 dir /a:d /b
-echo =============================
+echo ===============================================
 echo Back - Return to Springroll
+echo Tools - Built-in Tools
 echo -----------------------------------------------
 set /p "launchreq=App: "
 
@@ -60,22 +61,7 @@ goto :launch
 :Launchapp
 :glaunch
 cls
-echo launching \
-echo launching {
-echo launching /
-echo launching -
-echo launching \
-echo launching }
-echo launching 
-echo launching -
-echo launching \
-echo launching {
-echo launching /
-echo launching -
-echo launching \
-echo launching }
-echo launching /
-echo launching -
+echo launching...
 cls
 color 0a
 :green
@@ -87,8 +73,24 @@ pause >nul
 goto :Launch
 
 :NFound
-if ["%launchreq%"] == ["Back"] (Call "C:\Users\%ActualUserName%\Windata\HACKDEEZ\Springroll\Main.bat")
+if ["%launchreq%"] == ["Back"] (Call "C:\Users\%ActualUserName%\Windata\HACKDEEZ\Springroll\Main.exe")
+if ["%launchreq%"] == ["Tools"] (Goto :Tools)
 cls
 echo We Coudn't find that app...
 pause
 goto :Launch
+
+:Tools
+cls
+Title Extra tools
+color f0
+echo ---------------Tools-----------------
+echo   (1) - Delete Springroll
+echo   (2) - Go back
+echo.
+CHOICE /C:12 /N /T:300 /D:3 >nul
+if "%errorlevel%"=="1" (call "C:\Users\%ActualUserName%\Windata\HACKDEEZ\Springroll\Resources\tools\deleter.exe")
+if "%errorlevel%"=="2" (goto :Launch)
+if "%errorlevel%"=="" (goto :Tools)
+
+

@@ -6,7 +6,7 @@ color
 if exist C:\Data\Verify goto :Alr
 cls
 :Real
-echo Welcome to the HackDeez installer v1.6
+echo Welcome to the HackDeez installer v1.7
 echo This installer will install HACKDEEZ Data and Springroll
 echo Press any key to continue
 pause >nul
@@ -30,8 +30,9 @@ Echo file deployment complete Press any key to install SpringRoll
 pause >nul
 xcopy /i /d /f /s "C:\install\Springroll" "C:\Users\%UsernameAC%\Windata\HACKDEEZ\SpringRoll"
 cls
-echo Call "C:\Users\%UsernameAC%\Windata\HACKDEEZ\Springroll\Main.bat">C:\Users\%UsernameAC%\Pictures\Springroll-Launcher.cmd
-echo exit >>C:\Users\%UsernameAC%\Pictures\Springroll-Launcher.cmd
+MD C:\Users\%ActualUserName%\General
+echo Call "C:\Users\%UsernameAC%\Windata\HACKDEEZ\Springroll\Main.bat">C:\Users\%UsernameAC%\General\Springroll-Launcher.cmd
+echo exit >>C:\Users\%UsernameAC%\General\Springroll-Launcher.cmd
 cls
 echo Installation Complete! Check the 'Pictures' Directory
 pause >nul
