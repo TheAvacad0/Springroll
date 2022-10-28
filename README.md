@@ -6,10 +6,9 @@ via the launcher
 Download the lates release zip, extract it
 and follow the instructions inside!
 # To-Do
-Custom Boot Patches
-GUI Mode
-More Tools in Launcher
-Better system Manipulation
+ - Custom Boot Patches
+ - More Tools in Launcher
+ - Better system Manipulation
 # App Format
 Put the main batch file in a folder with your app name
 named [launch.bat]
