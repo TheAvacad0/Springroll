@@ -1,5 +1,5 @@
 # Springroll
-Springroll is an New, CMD-Based, Batch file launcher and Hacks Application
+Springroll is an New, CMD-Based, Batch file launcher/Package manager and Hacks Application
 Application(s) can be installed through the (offline) appstore and launched
 via the launcher
 # Installation
