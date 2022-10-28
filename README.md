@@ -11,5 +11,8 @@ and follow the instructions inside!
  - Better system Manipulation
 # App Format
 Put the main batch file in a folder with your app name
-named [launch.bat]
+named:
+```c
+launch.bat
+```
 Fill meta.cmd accordingly
