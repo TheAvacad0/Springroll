@@ -3,42 +3,44 @@ cls
 color 
 0a
 :Main
-if exist C:\Data\Verify goto :Alr
+if exist C:\Data\verify goto :Alr
 cls
 :Real
-echo Welcome to the HackDeez installer v1.7
-echo This installer will install HACKDEEZ Data and Springroll
+echo Welcome to the HackDeez installer v1.6
+echo This installer will Install HACKDEEZ Data and Springroll, Or Update an Existing Installation
 echo Press any key to continue
 pause >nul
 cls
 echo Press any key to start
 pause >nul
 cls
-echo Jailbreaking...
+echo Please Wait...
 cls
 MD C:\Data
 echo This is fake>C:\Data\verify
 cls
-Echo Please enter your Windows Username:
+Echo Please enter your Username (Windows Local):
 Set /p "UsernameAC=Username: "
 cls
 MD C:\Users\%UsernameAC%\Windata\HACKDEEZ
 cls
 MD C:\Users\%UsernameAC%\AppData\SPRG
+MD C:\Users\%UsernameAC%\Windata\HACKDEEZ\exports
 cls
 Echo file deployment complete Press any key to install SpringRoll
 pause >nul
-xcopy /i /d /f /s "C:\install\Springroll" "C:\Users\%UsernameAC%\Windata\HACKDEEZ\SpringRoll"
+xcopy "C:\install\SpringRoll" "C:\Users\%UsernameAC%\Windata\HACKDEEZ\SpringRoll" /y
 cls
-MD C:\Users\%ActualUserName%\General
-echo Call "C:\Users\%UsernameAC%\Windata\HACKDEEZ\Springroll\Main.bat">C:\Users\%UsernameAC%\General\Springroll-Launcher.cmd
-echo exit >>C:\Users\%UsernameAC%\General\Springroll-Launcher.cmd
+echo call "C:\Users\%UsernameAC%\Windata\HACKDEEZ\Springroll\Springroll.exe">C:\Users\%ActualUserName%\Pictures\Springroll-Launcher.cmd
+echo exit >>C:\Users\%UsernameAC%\Pictures\Springroll-Launcher.cmd
 cls
-echo Installation Complete! Check the 'Pictures' Directory
+echo Installation/Update Complete! (Shortcut is in the 'Pictures' Directory)
 pause >nul
 exit
 
 :Alr
-Echo You don't need to run this installer twice
+cls
+Echo Press any key to Update, Close this Window to cancel
 Pause >nul
+goto :Real
 exit
